@@ -1,5 +1,5 @@
 import { lusitana } from '@/app/ui/fonts';
-import { CardSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from '@/app/ui/skeletons';
+import { CardsSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 import CardWrapper from '../../ui/dashboard/cards';
 import LatestInvoices from '../../ui/dashboard/latest-invoices';
@@ -11,7 +11,7 @@ export default async function Page() {
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>Dashboard</h1>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <Suspense fallback={<CardSkeleton />}>
+        <Suspense fallback={<CardsSkeleton />}>
           <CardWrapper />
         </Suspense>
       </div>

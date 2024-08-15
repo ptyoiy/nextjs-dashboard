@@ -1,12 +1,13 @@
 import { lusitana } from '@/app/ui/fonts';
 import { CardsSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from '@/app/ui/skeletons';
+import { cookies } from 'next/headers';
 import { Suspense } from 'react';
 import CardWrapper from '../../ui/dashboard/cards';
 import LatestInvoices from '../../ui/dashboard/latest-invoices';
 import RevenueChart from '../../ui/dashboard/revenue-chart';
 
 export default async function Page() {
-
+  cookies();
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>Dashboard</h1>
